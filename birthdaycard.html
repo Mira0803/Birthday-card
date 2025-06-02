@@ -1,0 +1,46 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miracle Birthday Card</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="birthdaycard.css/bithdaycard.css">
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  </head>
+  <body>
+    <div class="card" id="greeting-card">
+      <h1>Happy Birthday Mira!</h1>
+      <div class="profile-img">
+        <div class="img-box">
+         <img src="profilepofolio.jfif" alt="profile-picture">
+        </div>
+      </div>
+      <p><b>SUNSHINE</b></p>
+
+      <form action="https://formsubmit.co/miracleigboanusi@gmail.com" method="POST" id="contactForm" class="info">
+        <label for="name">
+          <strong>Full Name:</strong>
+          <input name="name" type="text" id="name" placeholder="Enter Name" required>
+        </label>
+        <label for="message">
+          <strong>Say a Prayer for Mira:</strong>
+          <textarea id="messageInput" name="message" rows="3" cols="45" placeholder="Enter text here" minlength="4" maxlength="100" required></textarea>
+        </label>
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_subject" value="New Birthday Message!" />
+        <input type="hidden" name="_captcha" value="false" />
+        <button type="submit">Send Card</button>
+      </form>
+
+
+      <div id="messageCard" class="cards hidden">
+        <h3>Your Message:</h3>
+        <p id="userMessage"></p>
+        <a id="shareWhatsApp" target="_blank" class="whatsapp-btn">Share on <i class="ri-whatsapp-fill"></i></a>
+        <button id="downloadImageBtn" class="whatsapp-btn">Download Card</button>
+      </div>
+  	</div>
+
+   <script src="birthdaycard.js"></script>
+  </body>
+</html>
