@@ -1,5 +1,3 @@
-// birthdaycard.js
-
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('contactForm');
   const nameInput = document.getElementById('name');
@@ -22,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const combinedMessage = `From: ${name}\n\n${message}`;
 
-    // Send to Formsubmit
     const formData = new FormData();
     formData.append('name', name);
     formData.append('message', message);
@@ -34,12 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(res => res.json())
     .then(data => {
       if (data.success === "true") {
-        // Display message card
+        
         userMessage.textContent = combinedMessage;
         messageCard.classList.remove('hidden');
         form.classList.add('hidden');
 
-        // Prepare WhatsApp share
         const encodedMsg = encodeURIComponent(combinedMessage);
         shareWhatsApp.href = `https://wa.me/?text=${encodedMsg}`;
       } else {
@@ -51,13 +47,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Download card as image
   if (downloadBtn) {
     downloadBtn.addEventListener('click', () => {
       const cardElement = document.querySelector('.card');
 
       html2canvas(cardElement, {
-        backgroundColor: '#7f77f1', // Card background color
+        backgroundColor: '#7f77f1',
         scale: 2,
         useCORS: true
       }).then(canvas => {
