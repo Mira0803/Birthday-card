@@ -128,7 +128,6 @@ button:focus {
 .profile-img {
   justify-content: center;
   margin-bottom: 20px;
-  transition: transform 0.3s ease
 }
 
 .profile-img .img-box {
